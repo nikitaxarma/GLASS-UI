@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(249, 246, 246, 0.986);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(95, 19, 166);
+}
+
+.glassmorphism {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 223, 230, 0.7),
+    rgba(255, 255, 255, 0.7)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+/* Fade In Effect */
+@keyframes fade {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fade 350ms ease-out;
+}
+
+/* Toast Animations */
+.toast {
+  animation: toast-start cubic-bezier(0.18, 0.89, 0.32, 1.28) 800ms forwards;
+  opacity: 1;
+  overflow: hidden;
+  max-height: 400px;
+  opacity: 1;
+  transform: translateX(0);
+}
+.hide-toast {
+  animation: toast-end cubic-bezier(0.18, 0.89, 0.32, 1.28) 600ms forwards;
+}
+@keyframes toast-start {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    max-height: 350px;
+  }
+}
+@keyframes toast-end {
+  50% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  51% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+    max-height: 0;
+    padding: 0;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+body {
+  color: #1a202c; /* This is a dark gray, close to black */
+  background-color: #fff5f7; /* This is a very light pink */
+}
+
+.shine-effect::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: shine 1.5s infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shine-effect:hover::before {
+  opacity: 1;
+}
+
+.frosted-glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 223, 230, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.frosted-glass:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 223, 230, 0.6),
+    rgba(255, 255, 255, 0.6)
+  );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.45);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
