@@ -29,7 +29,7 @@ const GlassyUIComponentsPage: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isPopupOpen2, setIsPopupOpen2] = useState(false);
-  const githubRepoUrl = 'https://github.com/tobiasrahul/GlassyUI-Components';
+  const githubRepoUrl = 'https://github.com/tobiasrahul/glassy-ui';
 
   const getGlassyClasses = () => {
     return 'backdrop-filter backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-lg transition-all duration-300';
