@@ -5,7 +5,7 @@ import './GlassyUILandingPage.css'; // Create this CSS file in the same director
 
 const GlassyUILandingPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const githubRepoUrl = 'https://github.com/tobiasrahul/glassy-ui';
+  const githubRepoUrl = 'https://github.com/priyansh06rawat/Glassy_UI';
 
   useEffect(() => {
     setIsVisible(true);
