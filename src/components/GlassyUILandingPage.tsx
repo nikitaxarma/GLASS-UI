@@ -5,7 +5,7 @@ import './GlassyUILandingPage.css'; // Create this CSS file in the same director
 
 const GlassyUILandingPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const githubRepoUrl = 'https://github.com/priyansh06rawat/Glassy_UI';
+  const githubRepoUrl = 'https://github.com/nikitaxarma/GLASS-UI';
 
   useEffect(() => {
     setIsVisible(true);
@@ -27,7 +27,7 @@ const GlassyUILandingPage: React.FC = () => {
       <div className='relative z-10 w-full max-w-4xl'>
         <header className='w-full flex justify-between items-center mb-8'>
           <div className='text-2xl font-bold text-white'>
-            <span className='text-blue-400'>Nikita Sharma</span>
+            <span className='text-blue-400'>NIKITA SHARMA</span>
           </div>
           <a
             href={githubRepoUrl}
