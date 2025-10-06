@@ -27,7 +27,7 @@ const GlassyUILandingPage: React.FC = () => {
       <div className='relative z-10 w-full max-w-4xl'>
         <header className='w-full flex justify-between items-center mb-8'>
           <div className='text-2xl font-bold text-white'>
-            <span className='text-blue-400'>Priyansh </span>
+            <span className='text-blue-400'>Nikita Sharma</span>
           </div>
           <a
             href={githubRepoUrl}
